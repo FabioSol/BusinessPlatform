@@ -7,8 +7,8 @@ class ForecastedPremise(Model):
 
     month = ForeignKeyField(Month)
     month_date = DateField()
-    usa_inflation = FloatField()
-    mex_inflation = FloatField()
+    usa_price_index = FloatField()
+    mex_price_index = FloatField()
     exchange_rate = FloatField()
 
     class Meta:
