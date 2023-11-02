@@ -5,8 +5,8 @@ from business_app.database import db
 class Month(Model):
     id = PrimaryKeyField()
     month_date = DateField(unique=True)
-    usa_inflation = FloatField()
-    mex_inflation = FloatField()
+    usa_price_index = FloatField()
+    mex_price_index = FloatField()
     exchange_rate = FloatField()
 
     class Meta:

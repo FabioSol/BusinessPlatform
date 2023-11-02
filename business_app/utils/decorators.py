@@ -5,7 +5,10 @@ def tabulate(func):
         cursor = func(*args, **kwargs)
         columns=[tup[0] for tup in cursor.description]
         data=cursor.fetchall()
-        return pd.DataFrame(data=data,columns=columns)
+        df = pd.DataFrame(data=data,columns=columns)
+        if 'id' in columns:
+            df.set_index('id', inplace=True)
+        return df
     return wrapper
 
 def dictionary(func):
