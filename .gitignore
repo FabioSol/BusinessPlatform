@@ -13,6 +13,8 @@ config.py
 
 .idea/
 
+files/
+
 # Distribution / packaging
 .Python
 build/

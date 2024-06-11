@@ -4,8 +4,8 @@ from business_app.database import db
 
 class AccountingCode(Model):
     id = PrimaryKeyField()
-    account_number = CharField()
-    account_name = CharField()
+    account_number = CharField() # code
+    account_name = CharField() # name
     account_type = CharField(default="Forecast")
     account_model = CharField(default="Mean")
 

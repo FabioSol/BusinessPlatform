@@ -1,7 +1,12 @@
 import os
 import configparser
 
-config_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/config.ini"
+dir_path = os.path.dirname(os.path.abspath(__file__))
+project_path = os.path.dirname(dir_path)
+
+files_path = dir_path + "/files"
+config_path = project_path + "/config.ini"
+
 
 config = configparser.ConfigParser()
 config.read(config_path)

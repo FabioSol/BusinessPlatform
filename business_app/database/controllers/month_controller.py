@@ -132,4 +132,3 @@ class ObjMonth:
         q = "SELECT * FROM Month"
         return db.execute_sql(q)
 
-print(ObjMonth.get_all())
